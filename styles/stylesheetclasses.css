@@ -1,0 +1,225 @@
+body{
+  margin;0
+  padding:0;
+  background:#aed6f1 ;
+  height:100%;
+}
+
+main{
+  width:100%;
+  /*background-color: rgb(170,0,0);*/
+  /*width:990px;
+  height:1000px;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+   /* position: relative;*/
+}
+
+.himg{
+  width:150px;
+  height:150px;
+  top:40px;
+ /*border:1px solid red;*/
+ /*position:relative;*/
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }
+
+
+h1{
+  /*text-align:center;*/ 
+  display:inline-block;
+  color:darkblue;
+  font-family: 'Frijole' ,cursive;
+}
+
+header{
+ background-color:#aed6f1 ;
+ /* width:100%;
+  height:100%;*/
+}
+
+#wrap	{
+	width: 100%; /* Spans the width of the page */
+	height: 50px; 
+	margin: 0; /* Ensures there is no space between sides of the screen and the menu */
+	z-index: 99; /* Makes sure that your menu remains on top of other page elements */
+	position: relative; 
+	background-color: #366b82;
+	}
+
+.navbar	{
+	height: 50px;
+    padding: 0;
+	margin: 0;
+	position: absolute; /* Ensures that the menu doesn’t affect other elements */
+	border-right: 1px solid #54879d; 
+	}
+
+.navbar li 	{
+			height: auto;
+			width: 150px;  /* Each menu item is 150px wide */
+			float: left;  /* This lines up the menu items horizontally */
+			text-align: center;  /* All text is placed in the center of the box */
+			list-style: none;  /* Removes the default styling (bullets) for the list */
+			font: normal bold 12px/1.2em Arial, Verdana, Helvetica;  
+			padding: 0;
+			margin: 0;
+			background-color: #366b82;
+                        }
+
+
+.navbar a	{							
+		padding: 18px 0;  /* Adds a padding on the top and bottom so the text appears centered vertically */
+		border-left: 1px solid #54879d; /* Creates a border in a slightly lighter shade of blue than the background.  Combined with the right border, this creates a nice effect. */
+		border-right: 1px solid #1f5065; /* Creates a border in a slightly darker shade of blue than the background.  Combined with the left border, this creates a nice effect. */
+		text-decoration: none;  /* Removes the default hyperlink styling. */
+		color: white; /* Text color is white */
+		display: block;
+		}
+
+ .navbar li:hover, a:hover {background-color: #54879d;} 
+
+.navbar li ul 	{
+		display: none;  /* Hides the drop-down menu */
+		height: auto;									
+		margin: 0; /* Aligns drop-down box underneath the menu item */
+		padding: 0; /* Aligns drop-down box underneath the menu item */			
+		}				
+
+.navbar li:hover ul 	{
+                        display: block; /* Displays the drop-down box when the menu item is hovered over */
+                        }
+
+.navbar li ul li {background-color: #54879d;} 
+
+
+.navbar li ul li a 	{
+		border-left: 1px solid #1f5065; 
+		border-right: 1px solid #1f5065; 
+		border-top: 1px solid #74a3b7; 
+		border-bottom: 1px solid #1f5065; 
+		}
+				
+.navbar li ul li a:hover	{background-color: #366b82;}
+
+h2{
+  color: darkblue;
+  font-family: 'Wendy One', sans-serif;
+}
+
+p{
+  font-family: 'Delius Swash Caps',cursive;
+}
+
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+  background:#366b82;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1%;
+}
+.col:first-child { margin-left: 0.5%; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_4_of_4 {
+	width: 100%;
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+.span_2_of_4 {
+	width: 49.2%;
+}
+.span_1_of_4 {
+	width: 23.8%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+.share-buttons img { 
+ width: 35px; 
+ height:35px;  
+ padding: 5px; 
+ border: 0; 
+ box-shadow: 0; 
+ display: inline-block;
+ } 
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+.classname{
+  background-color:#aed6f1; 
+}
+
+.col p span{
+  display: block;
+}
+
+.bold::first-word{
+  font-weight: bold;  
+}
